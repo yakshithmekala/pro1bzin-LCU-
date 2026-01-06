@@ -1,29 +1,21 @@
-// Node.js solution
-
-const fs = require('fs');
-
-const input = fs.readFileSync(0, 'utf8').trim().split(/\s+/);
-let idx = 0;
-
-const t = parseInt(input[idx++], 10);
-let output = [];
-
-for (let tc = 0; tc < t; tc++) {
-  const a = input[idx++];
-  const b = input[idx++];
-
-  // lengths
-  output.push(`${a.length} ${b.length}`);
-
-  // concatenation
-  output.push(a + b);
-
-  // swap first characters
-  let first =
-    b[0] + a.slice(1) + " " +
-    a[0] + b.slice(1);
-
-  output.push(first);
+export const getlcs = (a,b)=>
+{
+   
+    let n = a.length;
+    let m = b.length;
+    return LCS(a,b,n,m);
 }
 
-console.log(output.join('\n'));
+function LCS(str1,str2,n, m)
+{
+    if(n==0||m==0)
+        return 0;
+    if(str1[n-1]==str2[m-1])
+    {
+        return 1+LCS(str1,str2,n-1,m-1);
+    }
+    return Math.max(LCS(str1,str2,n-1,m),LCS(str1,str2,n,m-1));
+}
+/*
+localhost:3000?str1
+*/

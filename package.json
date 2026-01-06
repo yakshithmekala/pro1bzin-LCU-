@@ -1,0 +1,25 @@
+{
+  "name": "pro1bzin-lcu-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yakshithmekala/pro1bzin-LCU-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yakshithmekala/pro1bzin-LCU-/issues"
+  },
+  "homepage": "https://github.com/yakshithmekala/pro1bzin-LCU-#readme",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.2",
+    "nodemon": "^3.1.11"
+  }
+}
